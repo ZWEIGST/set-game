@@ -1,0 +1,264 @@
+@import "vars";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: $background-box;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+  }
+
+@keyframes jump-button {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (min-width: 1024px) {
+    button:hover {
+        animation: jump-button 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) alternate-reverse both;
+   }
+    .game-item:hover {
+        scale: 150%;
+        box-shadow: 5px 3px 6px 1px $background-button;
+    }
+}
+
+.top {
+    padding-top: 217px;
+    padding-left: 120px;
+    height: 1024px;
+    background-image: url(../img/top-background.jpg);
+    background-repeat:  no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &-heading {
+     font-weight: 700;
+     font-size: 4rem;
+     line-height: 78px;
+     color: $color-text;
+     margin-bottom: 2rem;
+    }
+
+    &-text {
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 32px;
+    color: $color-text;
+    margin-bottom: 2.75rem;
+    }
+    &-button {
+    background: $background-button;
+    border-radius: $border-radius;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: $color-text;
+    padding: 13px 74px 13px 74px;
+    box-sizing: border-box;
+    border: none;
+    transition: $transition;
+    outline: none;
+    }
+}
+
+// Press & Run 
+.top-text>span {
+    font-weight: bold;
+}
+
+.game {
+    &-box {
+    padding: 128px 120px 128px 120px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $color-text;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: $gap;
+    }
+    &-item {
+    background: linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%);
+    border-radius: 16px;
+    background-repeat:  no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    grid-column: span 4;
+    position: relative;
+    transition: $transition;
+    
+    &-link {
+    text-decoration: none;
+    }
+
+    &-text {
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    top: 14.75rem;
+    color: $color-text;
+    }
+    }
+}
+
+.game-item:nth-of-type(1) {
+    background-image: url(../img/game-1.jpg);
+}
+
+.game-item:nth-of-type(2) {
+    background-image: url(../img/game-2.jpg);
+}
+
+.game-item:nth-of-type(3) {
+    background-image: url(../img/game-3.jpg);
+}
+
+.seasons {
+    display: flex;
+    flex-direction: row;
+    column-gap: 120px;
+    margin-top: 233px;
+    &-box {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    
+        &-heading {
+            font-weight: 700;
+            font-size: 3rem;
+            line-height: 3.6875rem;
+            color: $color-text;
+            margin-top: 49px;
+        }
+        &-text {
+            font-weight: 300;
+            font-size: 1.125rem;
+            line-height: 2rem;
+            color: $color-text;
+        }
+        &-button {
+            width: 234px;
+            height: 48px;
+            background: $background-button;
+            border-radius: $border-radius;
+            font-weight: 400;
+            font-size: 1.125rem;
+            line-height: 1.375rem;
+            color: $color-text;
+            padding: 13px 90px 13px 74px;
+            box-sizing: border-box;
+            transition: $transition;
+            outline: none;
+            border: none;
+        }
+    }
+}
+
+.remember {
+    display: flex;
+    flex-direction: row;
+    margin-top: 239px;
+    column-gap: 120px;
+    margin-bottom: 242px;
+    &-box {
+        display: flex;
+        flex-direction: column;
+        gap: $gap;
+        &-heading {
+            margin-top: 43px;
+            font-weight: 700;
+            font-size: 3rem;
+            line-height: 3.6875rem;
+            color: $color-text;
+        }
+        &-text {
+            font-weight: 300;
+            font-size: 1.125rem;
+            line-height: 2rem;
+            color: $color-text;
+        }
+        &-button {
+            width: 15rem;
+            height: 3rem;
+            background: $background-button;
+            border-radius: $border-radius;
+            font-weight: 400;
+            font-size: 1.125rem;
+            line-height: 1.375rem;
+            color: $color-text;
+            padding: 13px 74px 13px 74px;
+            box-sizing: border-box;
+            border: none;
+            transition: $transition;
+            outline: none;
+            border: none;
+        }
+    }
+}
+
+.puzzles {
+    background-image: url(../img/puzzles-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $gap;
+    padding-left: 120px;
+    &-heading {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3.6875rem;
+    color: $color-text;
+    margin-top: 276px;
+    text-align: center;
+    }
+    &-text {
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    color: $color-text;
+    text-align: center;
+    }
+    &-button {
+    margin-bottom: 288px;
+    }
+}
+
+.footer-box {
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    padding-top: $gap;
+    padding-bottom: $gap;
+    &-save {
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    color: $color-text;
+    text-align: center;
+    }
+}
+
+@import 'mobile';

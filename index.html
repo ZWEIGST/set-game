@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SKYPRO 2077 Main</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <section class="top center">
+          <h1 class="top-heading">Добро пожаловать <br> на мой сайт !</h1>
+          <p class="top-text center">Вам предстоит пройти несколько увлекательных <br> игр. Если готов нажимай <span>поехали</span>  и <span>приступай</span></p>
+          <a href="#game">
+            <button class="top-button">Поехали!</button>
+          </a>
+        </section>
+    </header>
+  <div  id="game" class="game-box center">
+      <div class="game-item">
+          <a class="game-item-link" href="#">
+            <h4 class="game-item-text">Игра 1</h4>
+          </a>
+      </div>
+      <div class="game-item">
+          <a class="game-item-link" href="#">
+            <h4 class="game-item-text">Игра 2</h4>
+          </a>
+      </div>
+      <div class="game-item">
+          <a class="game-item-link" href="#"><h4 class="game-item-text">Игра 3</h4>
+        </a>
+      </div>
+  </div>
+
+  <section class="seasons center">
+    <div class="seasons-box center">
+       <h3 class="seasons-box-heading">Времена года!</h3>
+       <p class="seasons-box-text">Нажмите кнопку играть, введите номер месяца (от 1 до 12) и Вы <br> узнаете, к какому времени года он относится</p>
+       <button onclick="gameOne()" class="seasons-box-button">Играть!</button>
+    </div>
+    <div class="seasons-group">
+      <a href="#">
+        <img class="seasons-group-img" src="./img/seasons-groupbackground.png" alt="computer games girl">
+      </a>
+    </div>
+  </section>
+  <section class="remember center">
+    <div class="remember-group">
+      <a href="#">
+        <img class="remember-group-img" src="./img/remember-game-background.svg" alt="computer game remember words">
+      </a>
+    </div>
+    <div class="remember-box">
+      <h3 class="remember-box-heading">Запомни слова</h3>
+      <p class="remember-box-text">При нажатии на кнопку играть, вы увидите несколько слов, которые вам необходимо запомнить.</p>
+      <button onclick="gameTwo()" class="remember-box-button">Играть</button>
+    </div>
+  </section>
+  <section class="puzzles center">
+    <h3 class="puzzles-heading">Игра в загадки</h3>
+    <p class="puzzles-text">Компьютер загадывает загадку, вам необходимо ее угадать, если вы дадите не правильный ответ, то компьютер даст вам подсказку. У вас будет три попытки и две подсказки.</p>
+    <button onclick="gameThree()" class="remember-box-button puzzles-button center">Играть!</button>
+  </section>
+  <footer class="footer-box">
+    <h4 class="footer-box-save center">Все права защищены</h4>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
